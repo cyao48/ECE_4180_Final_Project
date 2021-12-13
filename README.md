@@ -19,14 +19,14 @@ Presentation Slides: (Put link here)
 ## Project Idea
 We were inspired by interactive robots like Cozmo and Vector to create an interactive mobile robot that can avoid obstacles and make cute faces and sounds. His name is Bobert.
 
-[![Cozmo](https://img.youtube.com/vi/DHY5kpGTsDE/0.jpg)](https://www.youtube.com/watch?v=DHY5kpGTsDE)
-
-[![Vector](https://img.youtube.com/vi/Qy2Z2TWAt6A/0.jpg)](https://www.youtube.com/watch?v=Qy2Z2TWAt6A)
-
 (Click to view videos introducing Cozmo and Vector)
 
-Block diagram of Bobert.
-![block diagram](link)
+[![Cozmo](https://img.youtube.com/vi/DHY5kpGTsDE/0.jpg)](https://www.youtube.com/watch?v=DHY5kpGTsDE)
+[![Vector](https://img.youtube.com/vi/Qy2Z2TWAt6A/0.jpg)](https://www.youtube.com/watch?v=Qy2Z2TWAt6A)
+
+
+Block Diagram:
+![block diagram](https://github.com/cyao48/ECE_4180_Final_Project/blob/main/block_diagram.png)
 
 ## Parts List
 
@@ -54,6 +54,9 @@ All components are connected to and controlled by Mbed. We used external batteri
 ![](link)
 
 #### Connection Tables
+
+Mbed to Bluetooth
+
 | Bluetooth   |     Mbed     |   Batteries  |
 |-------------|--------------|--------------|
 | GND         |  GND         |  GND         |
@@ -62,6 +65,8 @@ All components are connected to and controlled by Mbed. We used external batteri
 | TXO         |  p14         |              |
 | CTS         |  GND         |  GND         |
 
+Mbed to uLCD
+
 |    uLCD     |     Mbed     |   Batteries  |
 |-------------|--------------|--------------|
 | 5V          |              |  5V          |
@@ -69,6 +74,8 @@ All components are connected to and controlled by Mbed. We used external batteri
 | RX          |  p28         |              |
 | Reset       |  p30         |              |
 | GND         |  GND         |  GND         |
+
+Mbed to H-Bridge to Motors
 
 |  H-Bridge   |     Mbed     |   Batteries  |    Motors    |
 |-------------|--------------|--------------|--------------|
@@ -88,12 +95,24 @@ All components are connected to and controlled by Mbed. We used external batteri
 | PWMB        |  p23         |              |              |
 | GND         |  GND         |  GND         |              |
 
+Mbed to UltraSonic Sensor
+
 |UltraSonic Sensor|     Mbed     |   Batteries  |
 |-----------------|--------------|--------------|
 | Vcc             |              |  5V          |
 | GND             |  GND         |  GND         |
 | Trig            |  p6          |              |
 | Echo            |  p7          |              |
+
+Mbed to D-Amp to Speaker
+
+|Class D Audio Amp|     Mbed     |   Speaker    |
+|-----------------|--------------|--------------|
+| pwr-            |  GND         |  GND         |
+| pwr+            |  Vout        |              |
+| in+             |  p18         |              |
+| out+            |              |  +           |
+| out-            |              |  -           |
 
 
 ## Source Code
