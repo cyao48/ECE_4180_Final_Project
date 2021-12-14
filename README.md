@@ -6,7 +6,7 @@
 
 Presentation Slides: (Put link here)
 
-![Picture](link)
+![Picture](https://github.com/cyao48/ECE_4180_Final_Project/blob/main/bobert.jpg)
 
 
 ## Table of Content
@@ -56,8 +56,6 @@ Block Diagram:
 ## Schematic and Connection Tables
 
 #### Device Setup
-Picture of the breadboard setup.
-![](links)
 All components are connected to and controlled by Mbed. We used an external 9V battery (converted to 5V via the breaker) to supply more power. Please see the schematic diagram and connection tables below to set up the robot.
 
 #### Schematic
