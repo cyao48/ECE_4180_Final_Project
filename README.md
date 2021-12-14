@@ -142,13 +142,10 @@ main.ccp
 #include "mbed.h"
 #include "rtos.h"
 #include "uLCD_4DGL.h"
-#include "wave_player.h"
 #include "Motor.h"
 #include "ultrasonic.h"
 #include "Speaker.h"
-// #include "rgbLED.h"
 
-// SDFileSystem sd(p5, p6, p7, p8, "sd"); //SD card
 DigitalOut led1(LED1);
 DigitalOut led2(LED2);
 DigitalOut led3(LED3);
@@ -158,16 +155,16 @@ Serial pc(USBTX, USBRX);
 Serial Blue(p13, p14);
 Mutex uLCDMutex;
 Mutex lcdModeMutex;
-// Mutex BlueMutex;
 Mutex motorModeMutex;
 Mutex speakerModeMutex;
 int lcd_mode = 0;
 int motor_mode = 0;
 int speaker_mode = 0;
-Motor left(p23, p24, p25); // pwm, fwd, rev, can brake 
-Motor right(p22, p19, p20); // pwm, fwd, rev, can brake
+Motor right(p23, p15, p16); // pwm, fwd, rev, can brake 
+Motor left(p22, p19, p20); // pwm, fwd, rev, can brake
 bool stop = false;
-Speaker speaker(p18); //was p21
+Speaker speaker(p21);
+
 
 void dist(int distance)
 {
@@ -184,6 +181,7 @@ void dist(int distance)
 }
 
 ultrasonic mu(p6, p7, .1, 1, &dist);
+
 
 void motor_thread(void const *argument) {
     mu.startUpdates();//start measuring the distance
@@ -503,16 +501,6 @@ int main() {
         led3 = 0;
         led4 = 0;
     }
-    /*
-    while(1)
-    {
-        led1 = !led1;
-        Thread::wait(1000);
-        if (Blue.readable()){
-            uLCD.putc(Blue.getc());
-        }
-    }
-    */
 }
 ```
 
