@@ -517,7 +517,7 @@ Some of the improvements that we could make in the future include:
 2. Add the ability to play wav sound files and/or video files.
 3. Add more interactions with humans, such as hand-following, or response to hand waves.
 4. Add cliff detection sensors.
-5. Add a gyroscop to sense whether or not it has been picked up, and respond to it.
+5. Add a gyroscope to sense whether or not it has been picked up, and respond to it.
 
 ## References
 
