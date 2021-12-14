@@ -10,20 +10,28 @@ Presentation Slides: (Put link here)
 
 
 ## Table of Content
-* [Project Idea](#project-idea)
+* [Introduction](#introduction)
 * [Parts List](#parts-list)
 * [Schematic and Connection Tables](#schematic-and-connection-tables)
 * [Source Code](#source-code)
-* [Future Direction](#future-direction)
+* [Conclusion and Possible Improvements](#conclusion-and-possible-improvements)
 
-## Project Idea
-We were inspired by interactive robots like Cozmo and Vector to create an interactive mobile robot that can avoid obstacles and make cute faces and sounds. His name is Bobert.
+## Introduction
+
+*"Robotics is a powerful tool in education and it has gained a notable impact in the field of teaching computer science, engineering, math, physics and similar. As educational robotics laboratories stimulate many different abilities in students, such as problem solving and group working, it is possible to use robotics to promote soft skills as well."* - Rubinacci 
+
+More and more interactive robot toys like Cozmo and Vector have been introduced into the market, and as the study mentioned above has stated, interacting with robots can inspire
+and stimulate many different abilities in students. We were inspired by these interactive robot toys to build a basic interactive mobile robot named Bobert that has different expressions, play different sounds, and is able to avoid obstacles.
 
 (Click to view videos introducing Cozmo and Vector)
 
 [![Cozmo](https://img.youtube.com/vi/DHY5kpGTsDE/0.jpg)](https://www.youtube.com/watch?v=DHY5kpGTsDE)
 [![Vector](https://img.youtube.com/vi/Qy2Z2TWAt6A/0.jpg)](https://www.youtube.com/watch?v=Qy2Z2TWAt6A)
 
+
+The robot takes in command from the Bluefruit LE Connect APP via Bluetooth, and has both a autonomous mode and teleoperated mode. To switch from teleoperated mode to autonomous mode, press number "1" on the APP. To switch from autonomous mode to teleoperated mode, press number "2" on the APP. At the start of the program, the mode is set to the teleoperated mode by default. In this mode, Bobert is able to drive forward, backward, and turn based on the D-Pad button presses. It is also able to change expressions based on the number button presses. If it senses an obstacle in the front, it will stop and cannot be commanded to move forward until the obstacle has been cleared.
+
+In the autonomous mode, Bobert takes in distance information from the UltraSonic sensor. If anything is sensed to be within 400 mm, Bobert stops, turns, and continues to drive forward after avoiding the obstacle. His expression changes when he senses an obstacle and avoids it, and can still be changed via button presses.
 
 Block Diagram:
 ![block diagram](https://github.com/cyao48/ECE_4180_Final_Project/blob/main/block_diagram.png)
@@ -38,7 +46,8 @@ Block Diagram:
 * UltraSonic Sensor (HC-SR04): https://www.digikey.com/en/products/detail/osepp-electronics-ltd/HC-SR04/11198533
 * H-Bridge (SparkFun Motor Driver): https://www.sparkfun.com/products/14450
 * Mono Audio Ampt Breakout: https://www.sparkfun.com/products/11044
-* Power Supply: AA batteries x4
+* Power Supply: 9V Battery: https://www.amazon.com/Duracell-Coppertop-Alkaline-Batteries-Count/dp/B000K2NW08
+* Linear Voltage Regulator Board: https://www.digikey.com/en/products/detail/bud-industries/BBP-32701/8602382
 * Shadow Chassis: https://www.sparkfun.com/products/13301
 * Hobby Gearmotor x2: https://www.sparkfun.com/products/13302
 * Rubber Wheels x2: https://www.sparkfun.com/products/13259
@@ -47,9 +56,10 @@ Block Diagram:
 ## Schematic and Connection Tables
 
 #### Device Setup
-Pictures of fully assembled robot.
+Picture of the breadboard setup.
 ![](links)
-All components are connected to and controlled by Mbed. We used external batteries to supply more power. Please see the schematic diagram and connection tables below to set up the robot.
+All components are connected to and controlled by Mbed. We used an external 9V battery (converted to 5V via the breaker) to supply more power. Please see the schematic diagram and connection tables below to set up the robot.
+
 #### Schematic
 ![Schematic](https://github.com/cyao48/ECE_4180_Final_Project/blob/main/schematic.png)
 
@@ -500,5 +510,19 @@ int main() {
 
 ## Conclusion and Possible Improvements
 
+Bobert was inspired by various interactive robot toys, and is a basic interactive mobile robot that has different expressions, play different sounds, and is able to avoid obstacles. It has both an autonomous mode and a teleoperated mode. In both modes, there is an issue with not sensing obstacles from the sides and the back. Obstacles from the back are not as much of a problem, since Bobert only drives forward, but obstacles from the sides somtimes causes an issue when Bobert drives into walls at an angle. Since we only have one UltraSonic sensor on the robot, we can only detect obstacles from the front. Other than this, everything else works great.
+
+Some of the improvements that we could make in the future include:
+
+1. Add sensors to the sides and the back to be able to detect obstacles from all angles.
+2. Add the ability to play wav sound files and/or video files.
+3. Add more interactions with humans, such as hand-following, or response to hand waves.
+4. Add cliff detection sensors.
+5. Add a gyroscop to sense whether or not it has been picked up, and respond to it.
 
 
+## Authors
+
+* **Elizabeth Herrejon**   - eherrejon3@gatech.edu
+* **Nishant Sharma**       - nsharma93@gatech.edu
+* **Changxuan Yao**        - cyao48@gatech.edu
