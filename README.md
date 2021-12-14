@@ -15,10 +15,11 @@ Presentation Slides: https://github.com/cyao48/ECE_4180_Final_Project/blob/main/
 * [Schematic and Connection Tables](#schematic-and-connection-tables)
 * [Source Code](#source-code)
 * [Conclusion and Possible Improvements](#conclusion-and-possible-improvements)
+* [References](#references)
 
 ## Introduction
 
-*"Robotics is a powerful tool in education and it has gained a notable impact in the field of teaching computer science, engineering, math, physics and similar. As educational robotics laboratories stimulate many different abilities in students, such as problem solving and group working, it is possible to use robotics to promote soft skills as well."* - Rubinacci 
+*"Robotics is a powerful tool in education and it has gained a notable impact in the field of teaching computer science, engineering, math, physics and similar. As educational robotics laboratories stimulate many different abilities in students, such as problem solving and group working, it is possible to use robotics to promote soft skills as well."* - Rubinacci [1]
 
 More and more interactive robot toys like Cozmo and Vector have been introduced into the market, and as the study mentioned above has stated, interacting with robots can inspire
 and stimulate many different abilities in students. We were inspired by these interactive robot toys to build a basic interactive mobile robot named Bobert that has different expressions, plays different sounds, and is able to avoid obstacles.
@@ -518,6 +519,9 @@ Some of the improvements that we could make in the future include:
 4. Add cliff detection sensors.
 5. Add a gyroscop to sense whether or not it has been picked up, and respond to it.
 
+## References
+
+[1] F. Rubinacci, M. Ponticorvo, R. Passariello, and O. Miglino, “Robotics for soft skills training,” ResearchGate, Dec-2017. [Online]. Available:           https://www.researchgate.net/publication/327036615_Robotics_for_soft_skills_training. [Accessed: 13-Dec-2021]. 
 
 ## Authors
 
