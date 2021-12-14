@@ -8,6 +8,16 @@ Presentation Slides: https://github.com/cyao48/ECE_4180_Final_Project/blob/main/
 
 ![Picture](https://github.com/cyao48/ECE_4180_Final_Project/blob/main/bobert.jpg)
 
+Please **click** to view the videos of Bobert working below:
+
+Teleoperated:
+
+[![Teleoperated](https://img.youtube.com/vi/vme3hSqbSQM/0.jpg)](https://www.youtube.com/watch?v=vme3hSqbSQM)
+
+Autonomous:
+
+[![Autonomous](https://img.youtube.com/vi/ZKj0KyM5yLk/0.jpg)](https://www.youtube.com/watch?v=ZKj0KyM5yLk)
+
 
 ## Table of Content
 * [Introduction](#introduction)
