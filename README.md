@@ -21,7 +21,7 @@ Presentation Slides: https://github.com/cyao48/ECE_4180_Final_Project/blob/main/
 *"Robotics is a powerful tool in education and it has gained a notable impact in the field of teaching computer science, engineering, math, physics and similar. As educational robotics laboratories stimulate many different abilities in students, such as problem solving and group working, it is possible to use robotics to promote soft skills as well."* - Rubinacci 
 
 More and more interactive robot toys like Cozmo and Vector have been introduced into the market, and as the study mentioned above has stated, interacting with robots can inspire
-and stimulate many different abilities in students. We were inspired by these interactive robot toys to build a basic interactive mobile robot named Bobert that has different expressions, play different sounds, and is able to avoid obstacles.
+and stimulate many different abilities in students. We were inspired by these interactive robot toys to build a basic interactive mobile robot named Bobert that has different expressions, plays different sounds, and is able to avoid obstacles.
 
 (Click to view videos introducing Cozmo and Vector)
 
@@ -29,7 +29,7 @@ and stimulate many different abilities in students. We were inspired by these in
 [![Vector](https://img.youtube.com/vi/Qy2Z2TWAt6A/0.jpg)](https://www.youtube.com/watch?v=Qy2Z2TWAt6A)
 
 
-The robot takes in command from the Bluefruit LE Connect APP via Bluetooth, and has both a autonomous mode and teleoperated mode. To switch from teleoperated mode to autonomous mode, press number "1" on the APP. To switch from autonomous mode to teleoperated mode, press number "2" on the APP. At the start of the program, the mode is set to the teleoperated mode by default. In this mode, Bobert is able to drive forward, backward, and turn based on the D-Pad button presses. It is also able to change expressions based on the number button presses. If it senses an obstacle in the front, it will stop and cannot be commanded to move forward until the obstacle has been cleared.
+The robot takes in command from the Bluefruit LE Connect APP via Bluetooth, and has both an autonomous mode and teleoperated mode. To switch from teleoperated mode to autonomous mode, press number "1" on the APP. To switch from autonomous mode to teleoperated mode, press number "2" on the APP. At the start of the program, the mode is set to the teleoperated mode by default. In this mode, Bobert is able to drive forward, backward, and turn based on the D-Pad button presses. It is also able to change expressions based on the number button presses. If it senses an obstacle in the front, it will stop and cannot be commanded to move forward until the obstacle has been cleared.
 
 In the autonomous mode, Bobert takes in distance information from the UltraSonic sensor. If anything is sensed to be within 400 mm, Bobert stops, turns, and continues to drive forward after avoiding the obstacle. His expression can still be changed via button presses.
 
