@@ -4,7 +4,7 @@
 
 **Georgia Institute of Technology**
 
-Presentation Slides: (Put link here)
+Presentation Slides: https://github.com/cyao48/ECE_4180_Final_Project/blob/main/presentation_slides.pptx
 
 ![Picture](https://github.com/cyao48/ECE_4180_Final_Project/blob/main/bobert.jpg)
 
@@ -31,7 +31,7 @@ and stimulate many different abilities in students. We were inspired by these in
 
 The robot takes in command from the Bluefruit LE Connect APP via Bluetooth, and has both a autonomous mode and teleoperated mode. To switch from teleoperated mode to autonomous mode, press number "1" on the APP. To switch from autonomous mode to teleoperated mode, press number "2" on the APP. At the start of the program, the mode is set to the teleoperated mode by default. In this mode, Bobert is able to drive forward, backward, and turn based on the D-Pad button presses. It is also able to change expressions based on the number button presses. If it senses an obstacle in the front, it will stop and cannot be commanded to move forward until the obstacle has been cleared.
 
-In the autonomous mode, Bobert takes in distance information from the UltraSonic sensor. If anything is sensed to be within 400 mm, Bobert stops, turns, and continues to drive forward after avoiding the obstacle. His expression changes when he senses an obstacle and avoids it, and can still be changed via button presses.
+In the autonomous mode, Bobert takes in distance information from the UltraSonic sensor. If anything is sensed to be within 400 mm, Bobert stops, turns, and continues to drive forward after avoiding the obstacle. His expression can still be changed via button presses.
 
 Block Diagram:
 ![block diagram](https://github.com/cyao48/ECE_4180_Final_Project/blob/main/block_diagram.png)
